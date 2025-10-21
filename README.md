@@ -47,7 +47,7 @@ docker run -d -v ./users_saved:/app/users_saved -p 3030:3030 sarahhesham1/my-go-
 ## With Docker (Build Locally)
 
 ```bash
-docker build -t get-post-go .
+docker build -t my-go-app .
 docker run -d -v ./users_saved:/app/users_saved -p 3030:3030 my-go-app
 ```
 
