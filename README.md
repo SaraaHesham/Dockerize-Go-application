@@ -48,7 +48,7 @@ docker run -d -v ./users_saved:/app/users_saved -p 3030:3030 sarahhesham1/my-go-
 
 ```bash
 docker build -t get-post-go .
-docker run -d -v ./users:/app/users -p 3030:3030 get-post-go
+docker run -d -v ./users_saved:/app/users_saved -p 3030:3030 my-go-app
 ```
 
 * `-d` → run container in detached mode
@@ -70,7 +70,7 @@ go run main.go
 ```bash
 curl -X POST http://localhost:3030/users \
 -H "Content-Type: application/json" \
--d '{"Name":"Sara","Age":22,"Address":{"Street":"Elnady","City":"Tanta","Country":"Egypt"}}'
+-d '{"Name":"Sara","Age":23,"Address":{"Street":"Elnady","City":"Tanta","Country":"Egypt"}}'
 ```
 
 ### GET /users
